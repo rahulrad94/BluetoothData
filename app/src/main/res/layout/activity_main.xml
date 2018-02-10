@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rahul.bluetooth.MainActivity">
+
+    <Button
+        android:id="@+id/scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="35dp"
+        android:onClick="scanHandler"
+        android:text="Scan" />
+
+    <Button
+        android:id="@+id/read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/scan"
+        android:layout_alignBottom="@+id/scan"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="76dp"
+        android:onClick="readHandler"
+        android:text="Data" />
+
+    <TextView
+        android:id="@+id/sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scan"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@+id/scan"/>
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/sound"
+        android:layout_below="@+id/sound"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/temp"
+        android:layout_alignStart="@+id/scan"
+        android:text="Sound: " />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/temp"
+        android:layout_alignEnd="@+id/textView4"
+        android:text="Temp:" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="17dp"
+        android:text="Hum: " />
+
+    <TextView
+        android:id="@+id/textview60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_below="@+id/textView6"
+        android:layout_marginTop="19dp"
+        android:text="gas_MQ5:" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textview60"
+        android:layout_below="@+id/textview60"
+        android:layout_marginTop="21dp"
+        android:text="gas_MQ3:" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView8"
+        android:layout_below="@+id/textView8"
+        android:layout_marginTop="20dp"
+        android:text="gas_MQ2:" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView9"
+        android:layout_below="@+id/textView9"
+        android:layout_marginTop="18dp"
+        android:text="light: " />
+
+    <TextView
+        android:id="@+id/textview40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView10"
+        android:layout_below="@+id/textView10"
+        android:layout_marginTop="22dp"
+        android:text="gas_MQ9:" />
+
+    <TextView
+        android:id="@+id/hum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/temp"
+        android:layout_alignTop="@+id/textView6"
+        android:text=" " />
+
+    <TextView
+        android:id="@+id/gas5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/hum"
+        android:layout_alignTop="@+id/textview60"
+        android:text=" " />
+
+    <TextView
+        android:id="@+id/gas3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/gas5"
+        android:layout_alignTop="@+id/textView8"
+        android:text=" " />
+
+    <TextView
+        android:id="@+id/gas2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView9"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_marginStart="26dp"
+        android:layout_toEndOf="@+id/gas3" />
+
+    <TextView
+        android:id="@+id/light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/gas2"
+        android:layout_alignTop="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/gas9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textview40"
+        android:layout_alignEnd="@+id/light" />
+</RelativeLayout>
